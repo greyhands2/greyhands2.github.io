@@ -1,0 +1,705 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Boxed All</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{color:black;background:white;font:400 14px / 1.42 'Roboto',Helvetica,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:36px}h2{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#428bca;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px 'Raleway',Helvetica,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#f0f6fb;border-left:4px solid #428bca}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#428bca}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#70bbe1;background-color:#d9edf7}.badge.head{color:#70bbe1;background-color:#d9edf7}.badge.options{color:#70bbe1;background-color:#d9edf7}.badge.put{color:#f0db70;background-color:#fcf8e3}.badge.patch{color:#f0db70;background-color:#fcf8e3}.badge.post{color:#93cd7c;background-color:#dff0d8}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#428bca;cursor:pointer}.collapse-button .open{color:#428bca;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#428bca}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e8ab8}.definition .method.head{color:#2e8ab8}.definition .method.options{color:#2e8ab8}.definition .method.post{color:#56b82e}.definition .method.put{color:#b8a22e}.definition .method.patch{color:#b8a22e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:6px 12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal;padding:6px 0}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px;display:inline-block}.action h4.action-heading .method.get{color:#fff;background-color:#337ab7}.action h4.action-heading .method.head{color:#fff;background-color:#337ab7}.action h4.action-heading .method.options{color:#fff;background-color:#337ab7}.action h4.action-heading .method.put{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.patch{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.post{color:#fff;background-color:#5cb85c}.action h4.action-heading .method.delete{color:#fff;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal;word-break:break-all;display:inline-block;margin-top:2px}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#bce8f1}.action.get h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.head{border-color:#bce8f1}.action.head h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.options{border-color:#bce8f1}.action.options h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.post{border-color:#d6e9c6}.action.post h4.action-heading{color:#5cb85c;background:#dff0d8;border-bottom-color:#d6e9c6}.action.put{border-color:#faebcc}.action.put h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.patch{border-color:#faebcc}.action.patch h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#users">Users</a></div><div class="collapse-content"><ul><li><a href="#users-users-registration-post"><span class="badge post"><i class="fa fa-plus"></i></span>Register User</a></li><li><a href="#users-activate-account-post"><span class="badge post"><i class="fa fa-plus"></i></span>Activate User</a></li><li><a href="#users-users-login-post"><span class="badge post"><i class="fa fa-plus"></i></span>Login User</a></li><li><a href="#users-activation-email-post"><span class="badge post"><i class="fa fa-plus"></i></span>Resend Email</a></li><li><a href="#users-password-reset-post"><span class="badge post"><i class="fa fa-plus"></i></span>Reset User Password</a></li><li><a href="#users-password-change-post"><span class="badge post"><i class="fa fa-plus"></i></span>Change User Password</a></li><li><a href="#users-profile-update-post"><span class="badge post"><i class="fa fa-plus"></i></span>Update User Profile</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#products-admin">Products: Admin</a></div><div class="collapse-content"><ul><li><a href="#products-admin-create-product-group-post"><span class="badge post"><i class="fa fa-plus"></i></span>Product Group</a></li><li><a href="#products-admin-create-product-providers-post"><span class="badge post"><i class="fa fa-plus"></i></span>Product Providers</a></li><li><a href="#products-admin-create-product-core-post"><span class="badge post"><i class="fa fa-plus"></i></span>Product Core</a></li><li><a href="#products-admin-create-product-post"><span class="badge post"><i class="fa fa-plus"></i></span>Product Main</a></li></ul></div></div></nav><div class="content"><header><h1 id="top">Boxed All</h1></header><p>This is the official documntation for the Boxed All
+Backend Service.
+This Document Contains Information needed to
+facilitate a developer on how
+best to interact with the API service</p>
+<section id="users" class="resource-group"><h2 class="group-heading">Users <a href="#users" class="permalink">&para;</a></h2><div id="users-users-registration" class="resource"><h3 class="resource-heading">Users Registration <a href="#users-users-registration" class="permalink">&nbsp;&para;</a></h3><div id="users-users-registration-post" class="action post"><h4 class="action-heading"><div class="name">Register User</div><a href="#users-users-registration-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/users/register</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/users/register</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"me@abayomioyewumi.me"</span></span>,
+  "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"alrode"</span></span>,
+  "<span class="hljs-attribute">password-retry</span>": <span class="hljs-value"><span class="hljs-string">"alrode"</span></span>,
+  "<span class="hljs-attribute">firstname</span>": <span class="hljs-value"><span class="hljs-string">"Oyedeji"</span></span>,
+  "<span class="hljs-attribute">lastname</span>": <span class="hljs-value"><span class="hljs-string">"Oyewumi"</span></span>,
+  "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"08141680294"</span></span>,
+  "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">"Ota, Idiroko Road"</span></span>,
+  "<span class="hljs-attribute">city</span>": <span class="hljs-value"><span class="hljs-string">"Ota"</span></span>,
+  "<span class="hljs-attribute">state</span>": <span class="hljs-value"><span class="hljs-string">"Ogun"</span></span>,
+  "<span class="hljs-attribute">country</span>": <span class="hljs-value"><span class="hljs-string">"NG"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Fri, 11 Sep 2020 14:36:56 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Registration Succesful, Please Check your email to Activate Account"</span></span>,
+  "<span class="hljs-attribute">data</span>": <span class="hljs-value">{}</span>,
+  "<span class="hljs-attribute">errorcode</span>": <span class="hljs-value">{}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="users-activate-account" class="resource"><h3 class="resource-heading">Activate Account <a href="#users-activate-account" class="permalink">&nbsp;&para;</a></h3><div id="users-activate-account-post" class="action post"><h4 class="action-heading"><div class="name">Activate User</div><a href="#users-activate-account-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/users/activate_account</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/users/activate_account</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"osagiet1@outlook.com"</span></span>,
+  "<span class="hljs-attribute">ref</span>": <span class="hljs-value"><span class="hljs-string">"hy7DLeEzTvvLU1wjbSSxDcgQt1602790438607af186a12daaf8ab504ff3b9d2f5b977b13"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 30 Sep 2020 21:35:48 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    status: <span class="hljs-number">1</span>,
+    message: <span class="hljs-string">"Account Activated Succesfully"</span>,
+    headCode: <span class="hljs-number">200</span>,
+    data: {}
+}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="users-users-login" class="resource"><h3 class="resource-heading">Users Login <a href="#users-users-login" class="permalink">&nbsp;&para;</a></h3><div id="users-users-login-post" class="action post"><h4 class="action-heading"><div class="name">Login User</div><a href="#users-users-login-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/users/login</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/users/login</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"osagiet1@outlook.com"</span></span>,
+  "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"Level5acess411"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 30 Sep 2020 21:35:48 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Login Succesful"</span></span>,
+  "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"osagieosemwota1@gmail.com"</span></span>,
+    "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"XahEuBanJnva5EmEBycTD3Udv1602790566043b569d1dd20e10c59e04b120ae4d99b0f11b25edb9353f8601ff9c8817b7d6ddc2007c884d317d6e8abd895c59f69f8dd1a256879b74b11f1ed1c5650b93d8a7e3785f1c3511acc22e3279c7a57fb7061eff690a8971dc1266ef844e2cd12d746781a2f81204db16baf4272e02aed60bc9fcaa8b41aa367a46490cae3c3a769c2dbcc8e66205f706e87cc149be2a5195a40b6e4c9178d4a27ef1354438fba30ef6eae0d123c9c5dc160b7ad401348ae62f3cb7440bb484156abfe4d70f2b5240efb107424e5c29cc526bef240576dce0ecdc83433c795ea2485485170a88b28a033742ce76ec7bcee006c3bbf9f99fc4111c158457aec69e85336081f8a5d7e263a73e088ba02a4c8e82a5a3bb82892ca5c11b96ae5d34a2a30cfd15058ce12d4381a0df970706f87a725885a8316b41ce3271cc39cc9a534db12cedad899876e1449f724c59f26e2b7d79ef99e5c2974d7dfaf0388a99b7eb1e278f115cb6de4eadf595ebf47b8500a0099838de1b8d713"</span></span>,
+    "<span class="hljs-attribute">authExpires</span>": <span class="hljs-value"><span class="hljs-number">1605386166043</span></span>,
+    "<span class="hljs-attribute">profile</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">firstname</span>": <span class="hljs-value"><span class="hljs-string">"terry"</span></span>,
+      "<span class="hljs-attribute">lastname</span>": <span class="hljs-value"><span class="hljs-string">"hulk"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">errorcode</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="users-activation-email" class="resource"><h3 class="resource-heading">Activation Email <a href="#users-activation-email" class="permalink">&nbsp;&para;</a></h3><div id="users-activation-email-post" class="action post"><h4 class="action-heading"><div class="name">Resend Email</div><a href="#users-activation-email-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/users/resend_activation</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/users/resend_activation</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"ace@syntaximagination.com"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 30 Sep 2020 21:35:48 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+      status: <span class="hljs-number">1</span>,
+      message: <span class="hljs-string">"Account Activated Succesfully"</span>,
+      headCode: <span class="hljs-number">200</span>,
+      data: {}
+    }</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="users-password-reset" class="resource"><h3 class="resource-heading">Password Reset <a href="#users-password-reset" class="permalink">&nbsp;&para;</a></h3><div id="users-password-reset-post" class="action post"><h4 class="action-heading"><div class="name">Reset User Password</div><a href="#users-password-reset-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/users/reset_password</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/users/reset_password</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"ace@syntaximagination.com"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 30 Sep 2020 21:35:48 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    status: <span class="hljs-number">1</span>,
+    message: <span class="hljs-string">"Password reset completed, please check mail for new password"</span>,
+    headCode: <span class="hljs-number">400</span>,
+    code: <span class="hljs-string">'U308'</span>
+ }</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="users-password-change" class="resource"><h3 class="resource-heading">Password Change <a href="#users-password-change" class="permalink">&nbsp;&para;</a></h3><div id="users-password-change-post" class="action post"><h4 class="action-heading"><div class="name">Change User Password</div><a href="#users-password-change-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/users/change_password</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/users/change_password</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"LAw3CpuW9O3ogW5OMGotITyJG160150174877519504bf421511bc4effda7dd0ccd0250538361d1ace21ddbf4db7728db0adce3babc3af4759daeb337394112dfb4e124441f97ed92ccbcf3b4d1fb981ff8ce9d6f8d84bdb039cdd01ac3e7d1e2238a3274575031d06c69141c5dd5f2cd31bd80e4cbb555a73d0437ba0eab18100284e81a53aceb7c4ac4ba8327e88905069b2773081ce321d5a7b67c5d4d740518d60e3dbd78e945e39a046ff9d7acad5a7539bd791f99e6fb3c2a7e1ffebc52d5684c94f4c9d829ae7f04923fcee113d1844185691709ce5e41dc57d6ca8a5a2fbad1c75bfe9f05f6e745d1572ac87b2fefa443194230a73b8794ae5a1d82d2a2200e13"</span></span>,
+  "<span class="hljs-attribute">newpass</span>": <span class="hljs-value"><span class="hljs-string">"dfsdfsdf"</span></span>,
+  "<span class="hljs-attribute">oldpass</span>": <span class="hljs-value"><span class="hljs-string">"sfsdf"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 30 Sep 2020 21:35:48 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    status: <span class="hljs-number">1</span>,
+    message: <span class="hljs-string">"Password change completed, please check mail for new password"</span>,
+    headCode: <span class="hljs-number">400</span>,
+    code: <span class="hljs-string">'U386'</span>
+  }</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="users-profile-update" class="resource"><h3 class="resource-heading">Profile Update <a href="#users-profile-update" class="permalink">&nbsp;&para;</a></h3><div id="users-profile-update-post" class="action post"><h4 class="action-heading"><div class="name">Update User Profile</div><a href="#users-profile-update-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/users/update_profile</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/users/update_profile</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"LAw3CpuW9O3ogW5OMGotITyJG160150174877519504bf421511bc4effda7dd0ccd0250538361d1ace21ddbf4db7728db0adce3babc3af4759daeb337394112dfb4e124441f97ed92ccbcf3b4d1fb981ff8ce9d6f8d84bdb039cdd01ac3e7d1e2238a3274575031d06c69141c5dd5f2cd31bd80e4cbb555a73d0437ba0eab18100284e81a53aceb7c4ac4ba8327e88905069b2773081ce321d5a7b67c5d4d740518d60e3dbd78e945e39a046ff9d7acad5a7539bd791f99e6fb3c2a7e1ffebc52d5684c94f4c9d829ae7f04923fcee113d1844185691709ce5e41dc57d6ca8a5a2fbad1c75bfe9f05f6e745d1572ac87b2fefa443194230a73b8794ae5a1d82d2a2200e13"</span></span>,
+  "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"08141680294"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"me@abayomioyewumi.me"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Wed, 30 Sep 2020 21:35:48 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+   status: <span class="hljs-number">1</span>,
+   message: <span class="hljs-string">"Updating profile information completed"</span>,
+   headCode: <span class="hljs-number">400</span>,
+   code: <span class="hljs-string">'U441'</span>
+  }</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="products-admin" class="resource-group"><h2 class="group-heading">Products: Admin <a href="#products-admin" class="permalink">&para;</a></h2><div id="products-admin-create-product-group" class="resource"><h3 class="resource-heading">Create Product Group <a href="#products-admin-create-product-group" class="permalink">&nbsp;&para;</a></h3><div id="products-admin-create-product-group-post" class="action post"><h4 class="action-heading"><div class="name">Product Group</div><a href="#products-admin-create-product-group-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_group</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_group</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"eExThabVLaFWkGMYUXayG46PZ1596692860083f886377f401c112dcc80347db6ce972e1eb04789358e0f26cb5231284e8e8c77d6066959f530638b9589ba326c6694d50dda6105b0242003dc8910505a8e9ad8905e01b371fd23aea82aade0223367561696fcf0ea867b569fc4280227510d03144823d5d1d8444bb3051cff2ed2ac1430f35bf188a8ef644195d973be242b3240fc2df3367929cd900fd00f7b05e8db13"</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hosting"</span></span>,
+  "<span class="hljs-attribute">group</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">params</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">shortname</span>": <span class="hljs-value"><span class="hljs-string">"hosting"</span></span>,
+    "<span class="hljs-attribute">desc</span>": <span class="hljs-value"><span class="hljs-string">"BoxedAll provides on of the cheapest web hosting service to ensure you have super easy experience hosting all your clients. We also provide custom application Hosting with Serverless Concepts"</span></span>,
+    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"/products/hosting"</span></span>,
+    "<span class="hljs-attribute">icon</span>": <span class="hljs-value"><span class="hljs-string">"world"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Sat, 12 Sep 2020 09:18:07 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Group Created Succesfully"</span></span>,
+  "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hosting"</span></span>,
+    "<span class="hljs-attribute">group</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">uiid</span>": <span class="hljs-value"><span class="hljs-number">1599902287606</span></span>,
+    "<span class="hljs-attribute">params</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">shortname</span>": <span class="hljs-value"><span class="hljs-string">"hosting"</span></span>,
+      "<span class="hljs-attribute">desc</span>": <span class="hljs-value"><span class="hljs-string">"la la bla"</span></span>,
+      "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"/products/hosting"</span></span>,
+      "<span class="hljs-attribute">icon</span>": <span class="hljs-value"><span class="hljs-string">"world"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">actionby</span>": <span class="hljs-value"><span class="hljs-number">1599835016099</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">errorcode</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="products-admin-create-product-providers" class="resource"><h3 class="resource-heading">Create Product Providers <a href="#products-admin-create-product-providers" class="permalink">&nbsp;&para;</a></h3><div id="products-admin-create-product-providers-post" class="action post"><h4 class="action-heading"><div class="name">Product Providers</div><a href="#products-admin-create-product-providers-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_provider</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_provider</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"eExThabVLaFWkGMYUXayG46PZ1596692860083f886377f401c112dcc80347db6ce972e1eb04789358e0f26cb5231284e8e8c77d6066959f530638b9589ba326c6694d50dda6105b0242003dc8910505a8e9ad8905e01b371fd23aea82aade0223367561696fcf0ea867b569fc4280227510d03144823d5d1d8444bb3051cff2ed2ac1430f35bf188a8ef644195d973be242b3240fc2df3367929cd900fd00f7b05e8db13"</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"OVH CA"</span></span>,
+  "<span class="hljs-attribute">group</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">params</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">shortname</span>": <span class="hljs-value"><span class="hljs-string">"ovh_canada"</span></span>,
+    "<span class="hljs-attribute">desc</span>": <span class="hljs-value"><span class="hljs-string">"OVH Provides BoxedAll with Dedicated Servers for Virtualizaion"</span></span>,
+    "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"/products/hosting"</span></span>,
+    "<span class="hljs-attribute">icon</span>": <span class="hljs-value"><span class="hljs-string">"world"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Sat, 12 Sep 2020 09:18:07 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+      status:1,
+      message: "Product Created Successfully",
+      headCode: 200,
+      data: {
+        "name": "OVH CA",
+        "group": 2,
+        "providerID": 1599902287606,
+        "params": {
+          "shortname" : "ovh_canada",
+          "desc" : "OVH Provides BoxedAll with Dedicated Servers for Virtualizaion",
+          "url" : "/products/hosting",
+          "icon" : "world"
+        },
+        actionby": 1599835016099
+      },
+      "errorcode": ""
+  }</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="products-admin-create-product-core" class="resource"><h3 class="resource-heading">Create Product Core <a href="#products-admin-create-product-core" class="permalink">&nbsp;&para;</a></h3><div id="products-admin-create-product-core-post" class="action post"><h4 class="action-heading"><div class="name">Product Core</div><a href="#products-admin-create-product-core-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_product_core</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_product_core</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"eExThabVLaFWkGMYUXayG46PZ1596692860083f886377f401c112dcc80347db6ce972e1eb04789358e0f26cb5231284e8e8c77d6066959f530638b9589ba326c6694d50dda6105b0242003dc8910505a8e9ad8905e01b371fd23aea82aade0223367561696fcf0ea867b569fc4280227510d03144823d5d1d8444bb3051cff2ed2ac1430f35bf188a8ef644195d973be242b3240fc2df3367929cd900fd00f7b05e8db13"</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"VZ2-BHS7-CA-NA"</span></span>,
+  "<span class="hljs-attribute">group</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">providerid</span>": <span class="hljs-value"><span class="hljs-number">1596697076069</span></span>,
+  "<span class="hljs-attribute">params</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">shortname</span>": <span class="hljs-value"><span class="hljs-string">"ns3145708.ip-51-83-67.net"</span></span>,
+    "<span class="hljs-attribute">desc</span>": <span class="hljs-value"><span class="hljs-string">"OpenVZ 6 - Granville - France - Europe"</span></span>,
+    "<span class="hljs-attribute">config</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">os</span>": <span class="hljs-value">[
+        <span class="hljs-string">"ubuntu"</span>,
+        <span class="hljs-string">"centos"</span>,
+        <span class="hljs-string">"redhat"</span>
+      ]</span>,
+      "<span class="hljs-attribute">storage</span>": <span class="hljs-value"><span class="hljs-string">"4Tb"</span></span>,
+      "<span class="hljs-attribute">ram</span>": <span class="hljs-value"><span class="hljs-string">"64Gb"</span></span>,
+      "<span class="hljs-attribute">network</span>": <span class="hljs-value"><span class="hljs-string">"1Gpbs"</span></span>,
+      "<span class="hljs-attribute">ipaddress</span>": <span class="hljs-value"><span class="hljs-string">"51.83.67.25"</span></span>,
+      "<span class="hljs-attribute">dc</span>": <span class="hljs-value"><span class="hljs-string">"Granville"</span></span>,
+      "<span class="hljs-attribute">country</span>": <span class="hljs-value"><span class="hljs-string">"fr"</span></span>,
+      "<span class="hljs-attribute">region</span>": <span class="hljs-value"><span class="hljs-string">"eu"</span></span>,
+      "<span class="hljs-attribute">virtualization</span>": <span class="hljs-value"><span class="hljs-string">"openvz6"</span></span>,
+      "<span class="hljs-attribute">virt</span>": <span class="hljs-value"><span class="hljs-string">"ovz6"</span></span>,
+      "<span class="hljs-attribute">request_key</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"51.83.67.25"</span></span>,
+        "<span class="hljs-attribute">port</span>": <span class="hljs-value"><span class="hljs-number">2202</span></span>,
+        "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"6EiifTOgj78G8G7GB8yvvbyjhT7UYhcrVFG5GG6bSd5OsIcNT4xx1omC7nlrAZntaPOOxmMSuvMY5WG0JqZrjOCo66HnGpZTEz7m37283267236gd3g32763f273f32d38bdd8d3g32ubdjydb832g32ubyd33dTL4iHvm6a"</span></span>,
+        "<span class="hljs-attribute">serverToken</span>": <span class="hljs-value"><span class="hljs-string">"moKbwB09bHD4wKmDqm3w7jrt11kU50vvoammtmy4UtEY6FCSKpUAerAdliMxnuiL6YkH2LPY5RncXq0d6suCmkFSO7JtxoAqGd2DbwDGs3mivFuFpb1N0O"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">ips</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.24"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.25"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.26"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.27"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.68"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.69"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.70"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.71"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"79.137.20.54"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"de"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"164.132.142.13"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"178.32.56.60"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"178.33.252.11"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"fr"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"188.165.168.21"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"51.255.7.243"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"de"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"54.37.190.185"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"be"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"79.137.20.205"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"87.98.179.187"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"fr"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"91.134.179.215"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"de"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"149.202.138.188"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"178.32.57.129"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"188.165.5.218"</span></span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+          "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+        </span>}
+      ]
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Sat, 12 Sep 2020 09:18:07 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Product Created Succesfully"</span></span>,
+  "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">product_core_id</span>": <span class="hljs-value"><span class="hljs-number">1601144716117</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"VZ2-GRA-FR-EU"</span></span>,
+    "<span class="hljs-attribute">providerid</span>": <span class="hljs-value"><span class="hljs-number">1596697076069</span></span>,
+    "<span class="hljs-attribute">group</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">params</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">shortname</span>": <span class="hljs-value"><span class="hljs-string">"ns3145708.ip-51-83-67.net"</span></span>,
+      "<span class="hljs-attribute">desc</span>": <span class="hljs-value"><span class="hljs-string">"OpenVZ 6 - Granville - France - Europe"</span></span>,
+      "<span class="hljs-attribute">config</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">os</span>": <span class="hljs-value">[
+          <span class="hljs-string">"ubuntu"</span>,
+          <span class="hljs-string">"centos"</span>,
+          <span class="hljs-string">"redhat"</span>
+        ]</span>,
+        "<span class="hljs-attribute">storage</span>": <span class="hljs-value"><span class="hljs-string">"4Tb"</span></span>,
+        "<span class="hljs-attribute">ram</span>": <span class="hljs-value"><span class="hljs-string">"64Gb"</span></span>,
+        "<span class="hljs-attribute">network</span>": <span class="hljs-value"><span class="hljs-string">"1Gpbs"</span></span>,
+        "<span class="hljs-attribute">ipaddress</span>": <span class="hljs-value"><span class="hljs-string">"51.83.67.25"</span></span>,
+        "<span class="hljs-attribute">dc</span>": <span class="hljs-value"><span class="hljs-string">"Granville"</span></span>,
+        "<span class="hljs-attribute">country</span>": <span class="hljs-value"><span class="hljs-string">"fr"</span></span>,
+        "<span class="hljs-attribute">region</span>": <span class="hljs-value"><span class="hljs-string">"eu"</span></span>,
+        "<span class="hljs-attribute">virtualization</span>": <span class="hljs-value"><span class="hljs-string">"openvz6"</span></span>,
+        "<span class="hljs-attribute">virt</span>": <span class="hljs-value"><span class="hljs-string">"ovz6"</span></span>,
+        "<span class="hljs-attribute">request_key</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"51.83.67.25"</span></span>,
+          "<span class="hljs-attribute">port</span>": <span class="hljs-value"><span class="hljs-number">2202</span></span>,
+          "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"6EiifTOgj78G8G7GB8yvvbyjhT7UYhcrVFG5GG6bSd5OsIcNT4xx1omC7nlrAZntaPOOxmMSuvMY5WG0JqZrjOCo66HnGpZTEz7m37283267236gd3g32763f273f32d38bdd8d3g32ubdjydb832g32ubyd33dTL4iHvm6a"</span></span>,
+          "<span class="hljs-attribute">serverToken</span>": <span class="hljs-value"><span class="hljs-string">"moKbwB09bHD4wKmDqm3w7jrt11kU50vvoammtmy4UtEY6FCSKpUAerAdliMxnuiL6YkH2LPY5RncXq0d6suCmkFSO7JtxoAqGd2DbwDGs3mivFuFpb1N0O"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">ips</span>": <span class="hljs-value">[
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.24"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.25"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.26"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.176.27"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.68"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.69"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.70"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.71"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"79.137.20.54"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"de"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"164.132.142.13"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"178.32.56.60"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"178.33.252.11"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"fr"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"188.165.168.21"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"51.255.7.243"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"de"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"54.37.190.185"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"be"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"79.137.20.205"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"87.98.179.187"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"fr"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"91.134.179.215"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"de"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"149.202.138.188"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"178.32.57.129"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"uk"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>},
+          {
+            "<span class="hljs-attribute">ip</span>": <span class="hljs-value"><span class="hljs-string">"188.165.5.218"</span></span>,
+            "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"nl"</span></span>,
+            "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>}
+        ]
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">actionby</span>": <span class="hljs-value"><span class="hljs-number">1599835016099</span></span>,
+    "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">errorcode</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="products-admin-create-product" class="resource"><h3 class="resource-heading">Create Product <a href="#products-admin-create-product" class="permalink">&nbsp;&para;</a></h3><div id="products-admin-create-product-post" class="action post"><h4 class="action-heading"><div class="name">Product Main</div><a href="#products-admin-create-product-post" class="method post">POST</a><code class="uri">/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_product</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/http:/boxedallcore.projects.syntaximagination.com/v1/products/create_product</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">authkey</span>": <span class="hljs-value"><span class="hljs-string">"eExThabVLaFWkGMYUXayG46PZ1596692860083f886377f401c112dcc80347db6ce972e1eb04789358e0f26cb5231284e8e8c77d6066959f530638b9589ba326c6694d50dda6105b0242003dc8910505a8e9ad8905e01b371fd23aea82aade0223367561696fcf0ea867b569fc4280227510d03144823d5d1d8444bb3051cff2ed2ac1430f35bf188a8ef644195d973be242b3240fc2df3367929cd900fd00f7b05e8db13"</span></span>,
+  "<span class="hljs-attribute">subscriptionOptions</span>": <span class="hljs-value">[
+    <span class="hljs-string">"Monthly"</span>,
+    <span class="hljs-string">"Quarterly"</span>,
+    <span class="hljs-string">"Half-Yearly"</span>,
+    <span class="hljs-string">"Yearly"</span>
+  ]</span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"BoxedAll vCloud [Custom]"</span></span>,
+  "<span class="hljs-attribute">product_core_id</span>": <span class="hljs-value"><span class="hljs-number">1601144716117</span></span>,
+  "<span class="hljs-attribute">group</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">params</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">os</span>": <span class="hljs-value">[
+      <span class="hljs-string">"ubuntu"</span>,
+      <span class="hljs-string">"centos"</span>,
+      <span class="hljs-string">"redhat"</span>
+    ]</span>,
+    "<span class="hljs-attribute">ipaddress</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.6"</span></span>,
+    "<span class="hljs-attribute">hostname</span>": <span class="hljs-value"><span class="hljs-string">"blo "</span></span>,
+    "<span class="hljs-attribute">searchdomain</span>": <span class="hljs-value"><span class="hljs-string">"blo blo"</span></span>,
+    "<span class="hljs-attribute">diskspace</span>": <span class="hljs-value"><span class="hljs-string">"30Gb"</span></span>,
+    "<span class="hljs-attribute">ram</span>": <span class="hljs-value"><span class="hljs-string">"12Gb"</span></span>,
+    "<span class="hljs-attribute">cpuunits</span>": <span class="hljs-value"><span class="hljs-string">"15"</span></span>,
+    "<span class="hljs-attribute">cpus</span>": <span class="hljs-value"><span class="hljs-string">"8"</span></span>,
+    "<span class="hljs-attribute">cpulimit</span>": <span class="hljs-value"><span class="hljs-string">"2000"</span></span>,
+    "<span class="hljs-attribute">nameserver</span>": <span class="hljs-value"><span class="hljs-string">"blo blo blo"</span></span>,
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"the best"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Boxed ALL VPS PAckage"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Create and Customize your Cloud Server to your Taste, Our Custom Cloud Server Engine enables you to build servers tailored for specific needs"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Access-Control-Allow-Methods</span>: <span class="hljs-string">GET, POST, PUT, DELETE</span><br><span class="hljs-attribute">Access-Control-Allow-Headers</span>: <span class="hljs-string">Content-Type</span><br><span class="hljs-attribute">Access-Control-Allow-Credentials</span>: <span class="hljs-string">true</span><br><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br><span class="hljs-attribute">Date</span>: <span class="hljs-string">Sat, 12 Sep 2020 09:18:07 GMT</span><br><span class="hljs-attribute">Connection</span>: <span class="hljs-string">keep-alive</span><br><span class="hljs-attribute">Transfer-Encoding</span>: <span class="hljs-string">chunked</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Product Created Succesfully"</span></span>,
+  "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">productid</span>": <span class="hljs-value"><span class="hljs-number">1601486256484</span></span>,
+    "<span class="hljs-attribute">subscriptionOptions</span>": <span class="hljs-value">[
+      <span class="hljs-string">"Monthly"</span>,
+      <span class="hljs-string">"Quarterly"</span>,
+      <span class="hljs-string">"Half-Yearly"</span>,
+      <span class="hljs-string">"Yearly"</span>
+    ]</span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"BoxedAll vCloud [Custom]"</span></span>,
+    "<span class="hljs-attribute">product_core_id</span>": <span class="hljs-value"><span class="hljs-number">1601144716117</span></span>,
+    "<span class="hljs-attribute">group</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">params</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">os</span>": <span class="hljs-value">[
+        <span class="hljs-string">"ubuntu"</span>,
+        <span class="hljs-string">"centos"</span>,
+        <span class="hljs-string">"redhat"</span>
+      ]</span>,
+      "<span class="hljs-attribute">ipaddress</span>": <span class="hljs-value"><span class="hljs-string">"5.196.199.6"</span></span>,
+      "<span class="hljs-attribute">hostname</span>": <span class="hljs-value"><span class="hljs-string">"blo "</span></span>,
+      "<span class="hljs-attribute">searchdomain</span>": <span class="hljs-value"><span class="hljs-string">"blo blo"</span></span>,
+      "<span class="hljs-attribute">diskspace</span>": <span class="hljs-value"><span class="hljs-string">"30Gb"</span></span>,
+      "<span class="hljs-attribute">ram</span>": <span class="hljs-value"><span class="hljs-string">"12Gb"</span></span>,
+      "<span class="hljs-attribute">cpuunits</span>": <span class="hljs-value"><span class="hljs-string">"15"</span></span>,
+      "<span class="hljs-attribute">cpus</span>": <span class="hljs-value"><span class="hljs-string">"8"</span></span>,
+      "<span class="hljs-attribute">cpulimit</span>": <span class="hljs-value"><span class="hljs-string">"2000"</span></span>,
+      "<span class="hljs-attribute">nameserver</span>": <span class="hljs-value"><span class="hljs-string">"blo blo blo"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"the best"</span></span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Boxed ALL VPS PAckage"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Create and Customize your Cloud Server to your Taste, Our Custom Cloud Server Engine enables you to build servers tailored for specific needs"</span></span>,
+    "<span class="hljs-attribute">actionby</span>": <span class="hljs-value"><span class="hljs-number">1599835016099</span></span>,
+    "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">errorcode</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 19 Oct 2020</p><script>/* eslint-env browser */
+/* eslint quotes: [2, "single"] */
+'use strict';
+
+/*
+  Determine if a string ends with another string.
+*/
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
+/*
+  Get a list of direct child elements by class name.
+*/
+function childrenByClass(element, name) {
+  var filtered = [];
+
+  for (var i = 0; i < element.children.length; i++) {
+    var child = element.children[i];
+    var classNames = child.className.split(' ');
+    if (classNames.indexOf(name) !== -1) {
+      filtered.push(child);
+    }
+  }
+
+  return filtered;
+}
+
+/*
+  Get an array [width, height] of the window.
+*/
+function getWindowDimensions() {
+  var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.body,
+      x = w.innerWidth || e.clientWidth || g.clientWidth,
+      y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+  return [x, y];
+}
+
+/*
+  Collapse or show a request/response example.
+*/
+function toggleCollapseButton(event) {
+    var button = event.target.parentNode;
+    var content = button.parentNode.nextSibling;
+    var inner = content.children[0];
+
+    if (button.className.indexOf('collapse-button') === -1) {
+      // Clicked without hitting the right element?
+      return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        // Currently showing, so let's hide it
+        button.className = 'collapse-button';
+        content.style.maxHeight = '0px';
+    } else {
+        // Currently hidden, so let's show it
+        button.className = 'collapse-button show';
+        content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+function toggleTabButton(event) {
+    var i, index;
+    var button = event.target;
+
+    // Get index of the current button.
+    var buttons = childrenByClass(button.parentNode, 'tab-button');
+    for (i = 0; i < buttons.length; i++) {
+        if (buttons[i] === button) {
+            index = i;
+            button.className = 'tab-button active';
+        } else {
+            buttons[i].className = 'tab-button';
+        }
+    }
+
+    // Hide other tabs and show this one.
+    var tabs = childrenByClass(button.parentNode.parentNode, 'tab');
+    for (i = 0; i < tabs.length; i++) {
+        if (i === index) {
+            tabs[i].style.display = 'block';
+        } else {
+            tabs[i].style.display = 'none';
+        }
+    }
+}
+
+/*
+  Collapse or show a navigation menu. It will not be hidden unless it
+  is currently selected or `force` has been passed.
+*/
+function toggleCollapseNav(event, force) {
+    var heading = event.target.parentNode;
+    var content = heading.nextSibling;
+    var inner = content.children[0];
+
+    if (heading.className.indexOf('heading') === -1) {
+      // Clicked without hitting the right element?
+      return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+      // Currently showing, so let's hide it, but only if this nav item
+      // is already selected. This prevents newly selected items from
+      // collapsing in an annoying fashion.
+      if (force || window.location.hash && endsWith(event.target.href, window.location.hash)) {
+        content.style.maxHeight = '0px';
+      }
+    } else {
+      // Currently hidden, so let's show it
+      content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+/*
+  Refresh the page after a live update from the server. This only
+  works in live preview mode (using the `--server` parameter).
+*/
+function refresh(body) {
+    document.querySelector('body').className = 'preload';
+    document.body.innerHTML = body;
+
+    // Re-initialize the page
+    init();
+    autoCollapse();
+
+    document.querySelector('body').className = '';
+}
+
+/*
+  Determine which navigation items should be auto-collapsed to show as many
+  as possible on the screen, based on the current window height. This also
+  collapses them.
+*/
+function autoCollapse() {
+  var windowHeight = getWindowDimensions()[1];
+  var itemsHeight = 64; /* Account for some padding */
+  var itemsArray = Array.prototype.slice.call(
+    document.querySelectorAll('nav .resource-group .heading'));
+
+  // Get the total height of the navigation items
+  itemsArray.forEach(function (item) {
+    itemsHeight += item.parentNode.offsetHeight;
+  });
+
+  // Should we auto-collapse any nav items? Try to find the smallest item
+  // that can be collapsed to show all items on the screen. If not possible,
+  // then collapse the largest item and do it again. First, sort the items
+  // by height from smallest to largest.
+  var sortedItems = itemsArray.sort(function (a, b) {
+    return a.parentNode.offsetHeight - b.parentNode.offsetHeight;
+  });
+
+  while (sortedItems.length && itemsHeight > windowHeight) {
+    for (var i = 0; i < sortedItems.length; i++) {
+      // Will collapsing this item help?
+      var itemHeight = sortedItems[i].nextSibling.offsetHeight;
+      if ((itemsHeight - itemHeight <= windowHeight) || i === sortedItems.length - 1) {
+        // It will, so let's collapse it, remove its content height from
+        // our total and then remove it from our list of candidates
+        // that can be collapsed.
+        itemsHeight -= itemHeight;
+        toggleCollapseNav({target: sortedItems[i].children[0]}, true);
+        sortedItems.splice(i, 1);
+        break;
+      }
+    }
+  }
+}
+
+/*
+  Initialize the interactive functionality of the page.
+*/
+function init() {
+    var i, j;
+
+    // Make collapse buttons clickable
+    var buttons = document.querySelectorAll('.collapse-button');
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = toggleCollapseButton;
+
+        // Show by default? Then toggle now.
+        if (buttons[i].className.indexOf('show') !== -1) {
+            toggleCollapseButton({target: buttons[i].children[0]});
+        }
+    }
+
+    var responseCodes = document.querySelectorAll('.example-names');
+    for (i = 0; i < responseCodes.length; i++) {
+        var tabButtons = childrenByClass(responseCodes[i], 'tab-button');
+        for (j = 0; j < tabButtons.length; j++) {
+            tabButtons[j].onclick = toggleTabButton;
+
+            // Show by default?
+            if (j === 0) {
+                toggleTabButton({target: tabButtons[j]});
+            }
+        }
+    }
+
+    // Make nav items clickable to collapse/expand their content.
+    var navItems = document.querySelectorAll('nav .resource-group .heading');
+    for (i = 0; i < navItems.length; i++) {
+        navItems[i].onclick = toggleCollapseNav;
+
+        // Show all by default
+        toggleCollapseNav({target: navItems[i].children[0]});
+    }
+}
+
+// Initial call to set up buttons
+init();
+
+window.onload = function () {
+    autoCollapse();
+    // Remove the `preload` class to enable animations
+    document.querySelector('body').className = '';
+};
+</script></body></html>
